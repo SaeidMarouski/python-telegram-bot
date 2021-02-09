@@ -142,7 +142,7 @@ def main() -> None:
                 MessageHandler(Filters.location, location),
                 CommandHandler('skip', skip_location),
             ],
-            BIO: [MessageHandler(Filters.text & ~Filters.command, bio)],
+            BIO: [MessageHandler(Filters.text & ~Filters.command, bio)]
         },
         fallbacks=[CommandHandler('cancel', cancel)],
     )
